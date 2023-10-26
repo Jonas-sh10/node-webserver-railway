@@ -35,6 +35,14 @@ app.get('/generic', (req, res) => {
   });
 });
 
+app.get('/salidas', (req, res) => {
+  res.render('salidas', {
+      nombre: ' JHONATAN SH',
+      titulo: 'Curso de Node'
+  });
+});
+
+
 // Ruta para manejar cualquier otra solicitud y enviar un archivo 404.html
 app.get('*', (req, res) => {
   res.sendFile(__dirname + '/public/404.html');
